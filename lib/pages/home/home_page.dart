@@ -1,9 +1,11 @@
 import "package:flutter/material.dart";
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/example/projects.dart';
 import 'package:my_portfolio/responsive.dart';
 import 'package:my_portfolio/scroll_behaviour.dart';
 import 'package:my_portfolio/widgets/Cards/project_card.dart';
 import 'package:my_portfolio/widgets/Header/header.dart';
+import 'package:share_plus/share_plus.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,8 +16,9 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
         onPressed: () {
-          // ignore: avoid_print
-          print("Button Pressed!");
+          Share.share(
+            "Check out Talabi Ayomide's portfolio https://my-portfolio-mac.web.app/#/"
+          );
         },
         child: const Icon(
           Icons.share,
@@ -37,9 +40,9 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: 25, // Vertical Spacing of 25 pixels
                   ),
-                  const Text(
+                  Text(
                     "Projects",
-                    style: TextStyle(
+                    style: GoogleFonts.urbanist(
                       fontSize: 19,
                       fontWeight: FontWeight.w600,
                     ),

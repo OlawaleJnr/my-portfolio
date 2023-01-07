@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/models/project.dart';
 import 'package:my_portfolio/pages/project/project_detail.dart';
 
@@ -38,8 +39,9 @@ class ProjectCard extends StatelessWidget {
               children: [
                 Text(
                   project.name,
-                  style: const TextStyle(
+                  style: GoogleFonts.urbanist(
                     fontSize: 18,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 Container(
@@ -50,7 +52,7 @@ class ProjectCard extends StatelessWidget {
                   padding: const EdgeInsets.all(5.0),
                   child: Text(
                     project.year.toString(),
-                    style: const TextStyle(
+                    style: GoogleFonts.urbanist(
                       fontSize: 14,
                       color: Colors.white,
                     ),
@@ -79,9 +81,11 @@ class ProjectCard extends StatelessWidget {
             Text(
               project.description,
               maxLines: 3,
-              style: const TextStyle(
+              style: GoogleFonts.urbanist(
                 fontSize: 13,
-                overflow: TextOverflow.ellipsis,
+                textStyle: const TextStyle(
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ],

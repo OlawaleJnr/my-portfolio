@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/models/project.dart';
 import 'package:my_portfolio/responsive.dart';
 
@@ -29,7 +30,7 @@ class ProjectDetail extends StatelessWidget {
                       ),
                       Text(
                         project.name,
-                        style: const TextStyle(
+                        style: GoogleFonts.urbanist(
                           fontSize: 22,
                           fontWeight: FontWeight.w500,
                         ),
@@ -43,7 +44,7 @@ class ProjectDetail extends StatelessWidget {
                         padding: const EdgeInsets.all(5.0),
                         child: Text(
                           project.year.toString(),
-                          style: const TextStyle(
+                          style: GoogleFonts.urbanist(
                             fontSize: 14,
                             color: Colors.white,
                           ),
@@ -81,9 +82,9 @@ class ProjectDetail extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  const Text(
+                  Text(
                     "Technologies",
-                    style: TextStyle(
+                    style: GoogleFonts.urbanist(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -95,9 +96,9 @@ class ProjectDetail extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  const Text(
+                  Text(
                     "Description",
-                    style: TextStyle(
+                    style: GoogleFonts.urbanist(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -107,7 +108,7 @@ class ProjectDetail extends StatelessWidget {
                   ),
                   Text(
                     project.description,
-                    style: const TextStyle(
+                    style: GoogleFonts.urbanist(
                       fontSize: 16,
                       color: Colors.black,
                     )
@@ -147,7 +148,7 @@ class HorizontalTechView extends StatelessWidget {
             ),
             child: Text(
               techList[index],
-              style: const TextStyle(
+              style: GoogleFonts.urbanist(
                 fontSize: 14,
                 color: Colors.black,
               ),
