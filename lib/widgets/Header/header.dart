@@ -1,0 +1,41 @@
+import "package:flutter/material.dart";
+
+class Header extends StatelessWidget {
+  const Header({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          // NEW: take the least amount of space as possible
+          children: const [
+            Text(
+              "Welcome back 👋",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+            Text(
+              "Mide's Portfolio",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        Image.asset(
+          "assets/img/avataaars.png",
+          height: 45,
+        ),
+      ],
+    );
+  }
+}
